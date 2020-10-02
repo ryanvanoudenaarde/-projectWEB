@@ -3,3 +3,49 @@
   box-sizing:border-box;  
 }
 
+header{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 100px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;    
+}
+
+button:nth-of-type(1){
+    grid-column-start: 1;
+    grid-row-start: 1;
+    font-size: 2em;
+    border: none;
+    background: transparent;
+    justify-self: center;
+    align-self: center;    
+}
+
+img:nth-of-type(1){    
+    grid-column-start: 2;
+    grid-row-start: 1;
+    width: 50%;
+    justify-self: center;
+    align-self: center;    
+}
+
+img:nth-of-type(2){
+    grid-column-start: 3;
+    grid-row-start: 1;
+    justify-self: center;
+    align-self: center;
+}
+
+input {
+    width: 80%;
+    height: 3.5em;
+}
+
+main img:first-of-type{
+    position: absolute;
+    margin-top: 1em;
+    margin-left: -1em;
+    width: 200%;
+    overflow: hidden;    
+}
