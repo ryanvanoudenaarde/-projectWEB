@@ -38,7 +38,7 @@ img:nth-of-type(2){
 }
 
 input {
-    width: 80%;
+    width: 100%;
     height: 3.5em;
 }
 
@@ -47,5 +47,13 @@ main img:first-of-type{
     margin-top: 1em;
     margin-left: -1em;
     width: 200%;
-    overflow: hidden;    
+    overflow: hidden; 
+    z-index: 1;
+}
+
+main h1{
+    position: absolute;
+    text-align: center;
+    z-index: 5;
+    color: white;
 }
