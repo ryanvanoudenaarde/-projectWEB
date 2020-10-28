@@ -1,48 +1,102 @@
 <!doctype html>
 <html lang="nl">
-	
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="author" content="jouw naam">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<title>Bakker Bart</title>
-	
-	<link href="styles/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="author" content="jouw naam">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Bakker Bart</title>
+
+    <link href="styles/style.css" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <button class="menu">&#9776</button>
+        <button class='menu'>&#9776;</button>
         <img src="images/logo.svg" alt="bakker bart logo">
         <img src="images/winkelwagen.svg" alt="winkelwagen icon">
     </header>
-    
-    <input type="search" placeholder="Doorzoek volledige winkel...">
-    
-    <main>   
-        <div class="heroimage">
-            <section class="herocontent">
-                <h1>Vind jouw Bakker Bart in de buurt.</h1>
-                
-                <button>Laten bezorgen</button>
-                <button>Zelf ophalen</button>
-                
-            
-            
-            </section>
-        
-        </div>
-        
-        
-        
-        
-    </main>
-    
-    
-    
 
-	<script src="scripts/script.js"></script>
+    <input type="search" placeholder="Doorzoek volledige winkel...">
+
+    <main>
+        <section class="herocontent">
+            <h1>Vind jouw Bakker Bart in de buurt.</h1>
+            <button>Laten bezorgen</button>
+            <button>Zelf ophalen</button>
+        </section>
+
+        <section class="besteluitleg">
+            <h2>Bestellen doe je bij jouw Bakker Bart</h2>
+
+            <div class="bestelgrid">
+                <article>
+                    <img src="images/bakker_icon.png" alt="winkel icoon">
+                    <h3>Selecteer jouw Bakker Bart</h3>
+                    <p>Kies één van onze 154 vestigingen bij jou in de buurt</p>
+                </article>
+
+                <article>
+                    <img src="images/broodje_icon.png" alt="brood icoon">
+                    <h3>Kies jouw favoriete lekkernij</h3>
+                    <p>Keuze uit honderden belegde broodjes en bakkerslekkernijen</p>
+                </article>
+
+                <article>
+                    <img src="images/Fiets_icon.png" alt="fiets icoon">
+                    <h3>Bezorgen óf afhalen</h3>
+                    <p>Binnen het uur vers in de winkel óf thuis bezorgd</p>
+                </article>
+            </div>
+        </section>
+
+        <picture>
+            <source media="(min-width: 900px)" "(max-width: 1920px)" srcset="images/lunchdealgroot.jpg">
+            <source media="(min-width: 480px)" srcset="images/lunchdeal.jpg">
+            <img src="OtherImage.png" alt="IfItDoesntMatchAnyMedia">
+        </picture>
+
+        <!-- <img class="lunchdeal" src="images/lunchdeal.jpg" alt="lunchdeal afbeelding"> -->
+
+
+        <section class="aanbod">
+            <div class="aanbodgrid">
+                <article class="lunch">
+                    <h4>Lunch <button>></button></h4>
+                </article>
+
+                <article class="traktaties">
+                    <h4>Traktaties <button>></button></h4>
+                </article>
+
+                <article class="belegdebroodjes">
+                    <h4>Belegde broodjes<button>></button></h4>
+                </article>
+
+                <article class="zoetelekkernijen">
+                    <h4>Zoete lekkernijen <button>></button></h4>
+                </article>
+
+                <article class="hartigesnacks">
+                    <h4>Hartige snacks <button>></button></h4>
+                </article>
+
+                <article class="brood">
+                    <h4>Brood <button>></button></h4>
+                </article>
+            </div>
+        </section>
+
+
+
+
+    </main>
+
+
+
+
+    <script src="scripts/script.js"></script>
 </body>
-	
+
 </html>
