@@ -1,11 +1,24 @@
 /* CSS Document */
 
+
+/* Bovenin de pagina zet ik in het algemeen de margin uit zodat ik deze later zelf kan toevoegen aan specifieke elementen als dit nodig is */
+
 *,
 *::after,
 *::before {
     box-sizing: border-box;
     margin: 0px;
 }
+
+
+/* Ik probeer de fonts op te roepen van de site van bakker bart, als dit niet lukt worden er alternatieven gebruikt */
+
+body {
+    font-family: 'Bree Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif
+}
+
+
+/* De header staat in een grid zodat elk gedeelte van de content mooi ingedeeld kan worden en goed kan schalen */
 
 header {
     display: grid;
@@ -29,11 +42,9 @@ header button {
 header img:nth-of-type(1) {
     grid-column-start: 2;
     grid-row-start: 1;
-    width: 50%;
-    min-width: 100px;
-    max-width: 300px;
     justify-self: center;
     align-self: center;
+    max-width: 250px;
 }
 
 header img:nth-of-type(2) {
@@ -41,17 +52,23 @@ header img:nth-of-type(2) {
     grid-row-start: 1;
     justify-self: center;
     align-self: center;
+    max-width: 200px;
 }
 
-input {
-    width: 90%;
+
+/* Hier zorg ik dat de zoekbalk er goed uitziet en goed gepositioneerd is */
+
+input:first-of-type {
+    width: 100%;
     height: 3.5em;
     display: block;
     margin: 0 auto;
     max-width: 500px;
-    font-size: 0.5;
     padding: 1em;
 }
+
+
+/* Hier regel ik alles wat met de heroimage te maken heeft. De afbeelding de h1 en de buttons */
 
 .herocontent {
     padding-top: 5em;
@@ -61,7 +78,7 @@ input {
     background-image: url('../images/headerbg.png');
     margin-top: 1em;
     width: 100%;
-    height: 50vh;
+    height: 70vh;
     background-size: cover;
     background-position: center;
 }
@@ -70,17 +87,6 @@ input {
     margin: 1em 1em 1em 1em;
     text-shadow: 2px 2px 3px rgba(2, 0, 0, 0.5);
 }
-
-
-/*
-.herocontent button:nth-of-type(1) {
-    background-image: url('../images/Fiets_icon.png') no-repeat;
-}
-
-.herocontent button:nth-of-type(2) {
-    background-image: url('../images/bakker_icon.png') background-repeat: no-repeat;
-}
-*/
 
 .herocontent button {
     display: flex;
@@ -108,10 +114,17 @@ input {
     top: 1px;
 }
 
+
+/* Dit regelt het paarse content blok met de uitleg over bestellen. Ook dit staat in een grid voor het schalen */
+
 .besteluitleg {
     background-color: #cb007c;
     color: white;
     text-align: center;
+}
+
+.besteluitleg p {
+    padding-bottom: 5em;
 }
 
 .bestelgrid {
@@ -120,8 +133,19 @@ input {
     grid-gap: 2em;
 }
 
-.besteluitleg p {
-    padding-bottom: 5em;
+
+/* Ik gebruik een media query om te zorgen dat het grid in 1 of 3 kolommen staat, dit zorgt voor een goede overgang tussen schermgroottes */
+
+@media (min-width: 300px) {
+    .bestelgrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width: 700px) {
+    .bestelgrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 h2 {
@@ -133,6 +157,9 @@ h3 {
     padding-top: 1em;
 }
 
+
+/* Hier zorg ik dat de afbeelding van de lunchdeal goed gepositioneerd staat en een max width heeft zodat hij er altijd goed uitziet */
+
 .lunchdeal {
     padding: 2em 1em 0 1em;
     display: block;
@@ -142,35 +169,46 @@ h3 {
     max-width: 500px;
 }
 
+
+/* Hier regel ik het grid die de content cards verplaatst en schaalt. Ook hier gebruik ik weer een media query om ervoor te zorgen dat er 1 of 3 kolommen zijn */
+
 .aanbodgrid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
     grid-gap: 1em;
 }
 
+@media (min-width: 300px) {
+    .aanbodgrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
 
-/*
-.aanbodgrid2 {
+@media (min-width: 900px) {
+    .aanbodgrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* Dit is vergelijkbaar met het vorige grid, alleen gebruik ik hier 1 en 2 kolommen i.p.v. 1 en 3  */
+
+.acties {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
     grid-gap: 1em;
 }
-*/
 
+@media (min-width: 300px) {
+    .acties {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
 
-/*
-.aanbodgrid {
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-template-rows: 300px;
-    justify-items: center;
-    align-items: center;
-    justify-content: center;
-} */
-
-.aanbod img {
-    padding: 2em 1em 0 1em;
-    width: 100%;
+@media (min-width: 900px) {
+    .acties {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .aanbod article {
@@ -182,6 +220,19 @@ h3 {
     background-size: cover;
     background-position: center;
 }
+
+.acties article {
+    padding-top: 2em;
+    width: 90%;
+    height: 15em;
+    margin: auto;
+    margin-top: 4em;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Hier zet ik een background image op alle articles die ik gebruik voor de content cards  */
 
 .lunch {
     background-image: url('../images/1lunch.jpg');
@@ -211,27 +262,43 @@ h3 {
     background-image: url('../images/6brood.jpg');
 }
 
-h4 {
+.aanbiedingen {
+    background-image: url('../images/aanbiedingen.jpg');
+}
+
+.groepslunch {
+    background-image: url('../images/groepslunch.jpg');
+}
+
+
+/* Hier regel ik de tekst en de buttons die je ziet op de content cards  */
+
+.aanbod h4 {
     padding: 6em 0em 1.5em 0.5em;
     color: white;
-    font-size: 1.7em;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 2px rgba(2, 0, 0, 0.5);
+}
+
+.acties h4 {
+    padding: 6em 0em 1.5em 0.5em;
+    color: white;
+    font-size: 1.5em;
     text-shadow: 2px 2px 2px rgba(2, 0, 0, 0.5);
 }
 
 .aanbod button {
-    /* right: 1.2em;
-    position: absolute; */
     background-color: #44c767;
-    left: 1em;
     border-radius: 8px;
     border: 1px solid #18ab29;
     cursor: pointer;
     color: #ffffff;
     font-family: Arial;
-    font-size: 20px;
+    font-size: 1em;
     padding: 7px 12px;
     text-decoration: none;
     text-shadow: 0px 1px 0px #2f6627;
+    margin-left: 1em;
 }
 
 .aanbod button:hover {
@@ -240,4 +307,254 @@ h4 {
 
 .aanbod article {
     max-width: 400px;
+}
+
+.acties button {
+    background-color: #44c767;
+    left: 1em;
+    border-radius: 8px;
+    border: 1px solid #18ab29;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 1em;
+    padding: 7px 12px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #2f6627;
+    margin-left: 1em;
+}
+
+.acties button:hover {
+    background-color: #5cbf2a;
+}
+
+.acties article {
+    max-width: 500px;
+}
+
+
+/* Ten slotte komt de footer waar ik alles in lists heb staan. Ik heb ervoor gezorgd dat alle list items tabbaar zijn omdat dit normale gesproken linkjes zijn  */
+
+footer {
+    background: #ede9e8;
+    margin-top: 5em;
+    padding: 2em 5em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    grid-gap: 2em;
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer li {
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+h5 {
+    font-size: 1.2em;
+    padding-bottom: 0.5em;
+}
+
+footer input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    background-color: #ede9e8;
+    font-size: 0.9em;
+    width: 1em;
+    margin-top: 1em;
+    padding: 0em;
+    text-align: center;
+    font-weight: 400;
+    padding: 0em;
+}
+
+footer button {
+    background-color: #44c767;
+    left: 1em;
+    border-radius: 5px;
+    border: 1px solid #18ab29;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 1em;
+    padding: 7px 12px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #2f6627;
+    margin-top: 1em;
+}
+
+footer button:hover {
+    background-color: #5cbf2a;
+}
+
+
+/********************************/
+
+
+/******* LUNCHDEAL PAGINA *******/
+
+
+/********************************/
+
+
+/* Hier regel ik de banner, vergelijkbaar met de hero image van de homepagina */
+
+.lunchdealbanner {
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 3em;
+    background-image: url('../images/lunchdealbannersmall.jpg');
+    width: 100%;
+    margin: auto;
+    margin-top: 0.5em;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.lunchdealbanner h1 {
+    text-shadow: 2px 2px 3px rgba(2, 0, 0, 0.5);
+}
+
+
+/* Ik gebruik een aparte tag voor deze tekst, omdat ik anders alle bodytekst over de hele sit aanpas als ik simpelweg een <p> zou gebruiken  */
+
+#bodytekst {
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 2em 0;
+    margin: auto;
+    max-width: 700px;
+}
+
+
+/* Dit is een apart content blok met een lijstje over hoe de lunchdeal werkt, een soort stappenplan */
+
+.lunchdealuitleg {
+    background-color: #ede9e8;
+    max-width: 800px;
+    margin: auto;
+    padding: 0 3em 3em 3em;
+}
+
+.lunchdealuitleg h2 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.lunchdealuitleg ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.lunchdealuitleg img {
+    width: 8%;
+    display: inline-block;
+    padding-right: 1em;
+}
+
+.lunchdealuitleg li {
+    padding-left: 1em;
+    text-align: left;
+    display: inline;
+}
+
+
+/* Ten slotte staan ook hier weer een soort content cards die waar ik een background image zet op alle articles en vervolgens de cards in een grid zet om ze responsive te maken */
+
+.paninideal {
+    background-image: url('../images/panini_deal.jpg');
+}
+
+.bartsdeal {
+    background-image: url('../images/Barts_deal.jpg');
+}
+
+.tostideal {
+    background-image: url('../images/tosti_deal.jpg');
+}
+
+.deals {
+    width: 100%;
+}
+
+.deals article {
+    padding-top: 2em;
+    min-width: 300px;
+    max-width: 700px;
+    height: 15em;
+    margin: auto;
+    margin-top: 4em;
+    background-size: cover;
+    background-position: center;
+}
+
+.dealsgrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    grid-gap: 1em;
+}
+
+@media (min-width: 300px) {
+    .dealsgrid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width: 900px) {
+    .dealsgrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* En hier regel ik weer de tekst en de buttons van de content cards */
+
+.deals button {
+    background-color: #44c767;
+    border-radius: 4px;
+    border: 1px solid #18ab29;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 1em;
+    padding: 15px 15px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #2f6627;
+    margin-left: 7em;
+}
+
+.deals button:hover {
+    background-color: #5cbf2a;
+}
+
+.deals article {
+    max-width: 400px;
+}
+
+.deals h4 {
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    padding: 5em 0 0.2em 0;
+    text-shadow: 2px 2px 3px rgba(2, 0, 0, 0.5);
 }

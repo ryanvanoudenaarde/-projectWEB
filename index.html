@@ -12,13 +12,22 @@
 </head>
 
 <body>
+
+    <!-- De header met daarin het hamburger menu, het logo en de winkelwagen -->
+
     <header>
         <button class='menu'>&#9776;</button>
-        <img src="images/logo.svg" alt="bakker bart logo">
-        <img src="images/winkelwagen.svg" alt="winkelwagen icon">
+        <a href="index.html"><img src="images/logo.svg" alt="bakker bart logo"></a>
+        <a href="index.html"><img src="images/winkelwagen.svg" alt="winkelwagen icon"></a>
     </header>
 
-    <input type="search" label="Doorzoek volledige winkel" placeholder="Doorzoek volledige winkel...">
+
+    <!-- De zoekbalk waarmee op de hele site gezocht kan worden, de placeholder tekst is de tekst die je te zien krijgt als je nog niks ingevuld hebt -->
+
+    <input type="search" placeholder="Doorzoek volledige winkel...">
+
+
+    <!-- Hier regel ik de heroimage, de h1 tekst en de buttons die op de image verschijnen -->
 
     <main>
         <section class="herocontent">
@@ -26,6 +35,9 @@
             <button>Laten bezorgen</button>
             <button>Zelf ophalen</button>
         </section>
+
+
+        <!-- Hier wordt een korte uitleg gegeven hoe bestellen werkt op de site. Per content blokje gebruik ik een article om deze later goed te kunnen positioneren -->
 
         <section class="besteluitleg">
             <h2>Bestellen doe je bij jouw Bakker Bart</h2>
@@ -51,22 +63,18 @@
             </div>
         </section>
 
-        <!--
-        <picture>
-            <source media="(min-width: 900px)" srcset="images/lunchdealgroot.jpg" style="max-width:100%">
-            <source media=" (min-width: 0px) " srcset="images/lunchdeal.jpg ">
-            <img src="OtherImage.png " alt="IfItDoesntMatchAnyMedia">
-        </picture>
-        -->
+
+        <!-- Hier is een advertentie te zien voor lunchdeals, deze afbeelding schaalt mee  -->
+
+        <a href="lunchdeal.html"><img class="lunchdeal " src="images/lunchdeal.jpg " alt="lunchdeal afbeelding"></a>
+
+        <!-- Hier beginnen de "content cards" waar je al het eten terug kunt vinden. Ik gebruik per card een article zodat ik de afbeelding, de h4 en de button samen kan positioneren -->
 
 
-        <img class="lunchdeal " src="images/lunchdeal.jpg " alt="lunchdeal afbeelding ">
-
-
-        <section class="aanbod ">
-            <div class="aanbodgrid ">
+        <section class="aanbod">
+            <div class="aanbodgrid">
                 <article class="lunch ">
-                    <h4>Lunch <button>></button></h4>
+                    <h4>Lunch<button>></button></h4>
                 </article>
 
                 <article class="traktaties ">
@@ -77,7 +85,6 @@
                     <h4>Belegde broodjes<button>></button></h4>
                 </article>
 
-
                 <article class="zoetelekkernijen ">
                     <h4>Zoete lekkernijen <button>></button></h4>
                 </article>
@@ -87,21 +94,86 @@
                 </article>
 
                 <article class="brood ">
-                    <h4>Brood <button>></button></h4>
+                    <h4>Brood<button>></button></h4>
                 </article>
             </div>
         </section>
-        
-        
-        <section class="aanbod ">
-                
-        
-        </section>
-            
-        
 
+        <!-- Hier zijn nog twee content cards die qua grootte en positie net iets anders zijn dan de vorige, hier staan er namelijk maar twee naast elkaar i.p.v. drie -->
+
+        <section class="acties">
+            <article class="aanbiedingen">
+                <h4>Aanbiedingen<button>></button></h4>
+            </article>
+
+            <article class="groepslunch">
+                <h4>Groepslunch<button>></button></h4>
+            </article>
+        </section>
     </main>
 
+
+    <!-- Hier begint de footer waar ik gebruik maak van verschillende lists om alle kopjes met de bijbehorende items neer te zetten -->
+
+    <footer>
+        <article>
+            <h5>Service & contact</h5>
+            <ul class="no-bullets">
+                <a href="index.html">
+                    <li>Contactformulier</li>
+                </a>
+                <a href="index.html">
+                    <li>Werken bij Bakker Bart</li>
+                </a>
+                <a href="index.html">
+                    <li>Veelgestelde vragen</li>
+                </a>
+                <a href="index.html">
+                    <li>Algemene voorwaarden</li>
+                </a>
+                <a href="index.html">
+                    <li>Privacy</li>
+                </a>
+                <a href="index.html">
+                    <li>Cookies</li>
+                </a>
+            </ul>
+        </article>
+
+        <article>
+            <h5>Over Bakker Bart</h5>
+            <ul>
+                <a href="index.html">
+                    <li>Over Bakker Bart</li>
+                </a>
+                <a href="index.html">
+                    <li>Winkels</li>
+                </a>
+                <a href="index.html">
+                    <li>Vacatures</li>
+                </a>
+                <a href="index.html">
+                    <li>Franchise</li>
+                </a>
+            </ul>
+        </article>
+
+        <article>
+            <h5>Contact</h5>
+            <a href="index.html">
+                <p>Neem contact op met onze klantenservice</p>
+            </a>
+        </article>
+
+        <!-- Ten slotte is er nog een input field voor als je je wil aanmelden voor de nieuwsbrief -->
+
+        <article>
+            <h5>Nieuwsbrief</h5>
+            <p>Schrijf je in voor onze nieuwsbrief:</p>
+            <input type="text" placeholder="Voer je e-mailadres in">
+            <button>Inschrijven</button>
+        </article>
+    </footer>
     <script src="scripts/script.js "></script>
 </body>
 
