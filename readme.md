@@ -31,16 +31,16 @@ Bij het derde voortgansgesprek was mijn vooruitgang helaas weer wat langzamer ge
 
 **Screenshot(s):**
 
-!(images/bakkerbart1.jpg)
+![screenshot](images/voortgang3.jpg)
 
 
 ### Verslag van meeting
 
 Tijdens het gesprek kreeg ik te horen dat mijn html en css er in het algemeen netjes uitzagen. Er waren alleen nog wel wat dingen die ik kon doen om het te verbeteren natuurlijk. Die dingen waren bijvoorbeeld:
-⋅⋅* Ik hoef geen div te gebruiken voor de heroimage, dit kan namelijk al met een section gedaan worden
-⋅⋅* Sommige dingen in de css konden nog wat netter, zo hoefde ik bijvoorbeeld als ergens een waarde 0 was er geen eenheid achter te zetten (dus niet: "0px", maar gewoon: "0")
-⋅⋅* Bij het input field kan nog een label toegevoegd worden
-⋅⋅* Voor de header afbeelding kan ik gebruik maken van viewport units
+* Ik hoef geen div te gebruiken voor de heroimage, dit kan namelijk al met een section gedaan worden
+* Sommige dingen in de css konden nog wat netter, zo hoefde ik bijvoorbeeld als ergens een waarde 0 was er geen eenheid achter te zetten (dus niet: "0px", maar gewoon: "0")
+* Bij het input field kan nog een label toegevoegd worden
+* Voor de header afbeelding kan ik gebruik maken van viewport units
 
 
 
@@ -59,10 +59,10 @@ Na de tweede feedbacksessie ben ik vergeten om screenshots maken. Hierna ben ik 
 ### Verslag van meeting
 
 Tijdens de meeting heb ik een aantal handige dingen genoteerd om mij te helpen met de header/hero image. Een aantal van de tips die ik kreeg zijn als volgt:
-⋅⋅* Gebruik voor het logo bovenin beeld een max-width van bijv. 300px zodat hij goed meeschaalt en niet te groot wordt
-⋅⋅* Voor de header kan je in html een container maken waarop je in css een background image kan zetten. Hier kan je vervolgens background-size en background-position op gebruiken om deze goed neer te ztten.
-⋅⋅* Om het input field goed te positioneren kan je hem als display:block gebruiken en vervolgens gewoon margin: auto gebruiken zodat hij in het midden komt. Ten slotte kan je deze ook een max-width meegeven.
-⋅⋅* Vergeet niet om: "margin: 0px" toe te voegen bovenin je document
+* Gebruik voor het logo bovenin beeld een max-width van bijv. 300px zodat hij goed meeschaalt en niet te groot wordt
+* Voor de header kan je in html een container maken waarop je in css een background image kan zetten. Hier kan je vervolgens background-size en background-position op gebruiken om deze goed neer te ztten.
+* Om het input field goed te positioneren kan je hem als display:block gebruiken en vervolgens gewoon margin: auto gebruiken zodat hij in het midden komt. Ten slotte kan je deze ook een max-width meegeven.
+* Vergeet niet om: "margin: 0px" toe te voegen bovenin je document
 
 
 
@@ -86,9 +86,9 @@ Aangezien ik nog heel weinig had voor mijn site had ik hier nog geen screenshots
 ### Verslag van meeting
 
 Alhoewel ik zelf geen feedback heb kunnen krijgen op mijn werk heb ik wel een aantal annotaties gemaakt vor dingen die ik zelf in gedachte kan houden. Hieronder vallen bijv. dingen als:
-⋅⋅* Je hebt voor veel dingen niet per se een div nodig
-⋅⋅* Laat in comments zien hoe je bepaalde dingen hebt gedaan
-⋅⋅* Met flex box kan je veel dingen handig positioneren
+* Je hebt voor veel dingen niet per se een div nodig
+* Laat in comments zien hoe je bepaalde dingen hebt gedaan
+* Met flex box kan je veel dingen handig positioneren
 
 
 
