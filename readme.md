@@ -31,7 +31,7 @@ Bij het derde voortgansgesprek was mijn vooruitgang helaas weer wat langzamer ge
 
 **Screenshot(s):**
 
-![screenshot](images/voortgang3.jpg)
+![screenshot](images/voortgang3.png)
 
 
 ### Verslag van meeting
