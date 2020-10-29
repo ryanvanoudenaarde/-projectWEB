@@ -15,12 +15,16 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ## Eindgesprek (week 7/8)
 
--dit ging goed & dit was lastig-
+Voor de oplevering heb ik een erg grote slag kunnen maken. Bij het derde voortgangsgesprek was ik misschien pas op 40% van mijn eerste pagina. Voor de oplevering heb ik allebei de pagina's zo goed als af kunnen krijgen. Als ik nog wat meer tijd haf had ik nog een micro interactie toe kunnen vagen en wat laatste positionerings en schaal dingetjes kunnen verbeteren
 
 **Screenshot(s):**
 
-
--screenshot(s) van je eindresultaat-
+![screenshot](images/product1.jpg)
+![screenshot](images/product2.png)
+![screenshot](images/product3.jpg)
+![screenshot](images/product4.png)
+![screenshot](images/product5.png)
+![screenshot](images/product6.png)
 
 
 
