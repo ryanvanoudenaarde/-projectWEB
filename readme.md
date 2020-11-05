@@ -10,6 +10,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 2. https://stackoverflow.com/
 3. https://www.w3schools.com/charsets/ref_utf_symbols.asp
 4. https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41420fe
+5. https://www.w3schools.com/howto/howto_js_sidenav.asp
 
 
 

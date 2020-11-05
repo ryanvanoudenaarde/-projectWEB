@@ -13,7 +13,24 @@
 
 <body>
     <header>
-        <button class='menu'>&#9776;</button>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">Home</a>
+            <a href="lunchdeal.html">Lunchdeals</a>
+            <a href="index.html">Belegde broodjes</a>
+            <a href="index.html">Brood</a>
+            <a href="index.html">Hartig</a>
+            <a href="index.html">Zoet</a>
+            <a href="index.html">Salades</a>
+            <a href="index.html">Ontbijt</a>
+            <a href="index.html">Lunch</a>
+            <a href="index.html">Traktaties</a>
+            <a href="index.html">Aanbiedingen</a>
+        </div>
+
+        <button class='ham' onclick="openNav()">&#9776;</button>
+
         <a href="index.html"><img src="images/logo.svg" alt="bakker bart logo"></a>
         <a href="index.html"><img src="images/winkelwagen.svg" alt="winkelwagen icon"></a>
     </header>
@@ -31,7 +48,7 @@
             <h1>Bart's lunchdeal</h1>
         </section>
 
-        <p id="bodytekst">Het is weer najaar en dat vieren we bij Bakker Bart met extra voordeel. Bij Bakker Bart kun je namelijk áltijd terecht voor een heerlijke lunchdeal! Elk bartje®, panini, of tosti naar keuze in combinatie met een drankje voor slechts €6,95.</p>
+        <p class="bodytekst">Het is weer najaar en dat vieren we bij Bakker Bart met extra voordeel. Bij Bakker Bart kun je namelijk áltijd terecht voor een heerlijke lunchdeal! Elk bartje®, panini, of tosti naar keuze in combinatie met een drankje voor slechts €6,95.</p>
 
         <!-- Hier gebruik ik een section met daarin een list zodat ik het content blok en de items daarin kan vormgeven en positioneren  -->
 
@@ -114,6 +131,8 @@
                 <p>Neem contact op met onze klantenservice</p>
             </a>
         </article>
+
+        <!-- Ten slotte is er nog een input field voor als je je wil aanmelden voor de nieuwsbrief -->
 
         <article>
             <h5>Nieuwsbrief</h5>

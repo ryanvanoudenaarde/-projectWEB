@@ -7,7 +7,7 @@
 *::after,
 *::before {
     box-sizing: border-box;
-    margin: 0px;
+    margin: 0;
 }
 
 
@@ -23,7 +23,7 @@ body {
 header {
     display: grid;
     grid-template-columns: 20% 60% 20%;
-    grid-template-rows: 100px;
+    grid-template-rows: 7em;
     justify-items: center;
     align-items: center;
     justify-content: center;
@@ -39,12 +39,71 @@ header button {
     align-self: center;
 }
 
+
+/* Hier regel ik de vormgeving van het nav/hamburger menu. Ook geef ik hier een simpele animatie mee aan het menu als deze in beeld komt d.m.v. "transition". Ook geef ik het menu een z-index zodat deze over de normale content heen komt te staan. */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    background-color: #F5F5F5;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 4em;
+    /* Bron voor het genereren van de schaduw: https://www.cssmatic.com/box-shadow */
+    -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.sidenav a {
+    padding: 0.5em 0.5em 0.5em 1em;
+    text-decoration: none;
+    font-size: 1.4em;
+    color: black;
+    display: block;
+    transition: 0.3s;
+    border-top: 0.01em solid lightgray;
+}
+
+.sidenav a:last-of-type {
+    border-bottom: 0.01em solid lightgray;
+}
+
+.sidenav>a:first-of-type {
+    border-top: none;
+}
+
+.sidenav a:hover {
+    color: darkgray;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 1em;
+    font-size: 2.2em;
+}
+
+@media screen and (max-height: 30em) {
+    .sidenav {
+        padding-top: 1.2em;
+    }
+    .sidenav a {
+        font-size: 1.4em;
+    }
+}
+
+
+/* Ten slotte in de header nog het logo en het winkelwagen icoontje */
+
 header img:nth-of-type(1) {
     grid-column-start: 2;
     grid-row-start: 1;
     justify-self: center;
     align-self: center;
-    max-width: 250px;
+    max-width: 15em;
 }
 
 header img:nth-of-type(2) {
@@ -52,7 +111,7 @@ header img:nth-of-type(2) {
     grid-row-start: 1;
     justify-self: center;
     align-self: center;
-    max-width: 200px;
+    max-width: 12em;
 }
 
 
@@ -63,7 +122,7 @@ input:first-of-type {
     height: 3.5em;
     display: block;
     margin: 0 auto;
-    max-width: 500px;
+    max-width: 30em;
     padding: 1em;
 }
 
@@ -85,22 +144,22 @@ input:first-of-type {
 
 .herocontent h1 {
     margin: 1em 1em 1em 1em;
-    text-shadow: 2px 2px 3px rgba(2, 0, 0, 0.5);
+    text-shadow: 0.1em 0.1em 0.12em rgba(2, 0, 0, 0.5);
 }
 
 .herocontent button {
     display: flex;
     flex-wrap: nowrap;
-    box-shadow: 1px 1px 3px 1px rgba(2, 0, 0, 0.5);
+    box-shadow: 0.1em 0.1em 0.3em 0.1em rgba(2, 0, 0, 0.5);
     background-color: #44c767;
-    border-radius: 5px;
-    border: 1px solid #18ab29;
+    border-radius: 0.5em;
+    border: 0.05em solid #18ab29;
     display: inline-block;
     cursor: pointer;
     color: #ffffff;
     font-size: 0.75em;
-    padding: 60px 10px;
-    text-shadow: 1px 2px 2px rgba(1, 0, 0, 0.5);
+    padding: 4em 0.9em;
+    text-shadow: 0.1em 0.14em 0.14em rgba(1, 0, 0, 0.5);
     width: 9em;
     margin: 0.5em;
 }
@@ -111,7 +170,7 @@ input:first-of-type {
 
 .herocontent button:active {
     position: relative;
-    top: 1px;
+    top: 0.1em;
 }
 
 
@@ -136,13 +195,13 @@ input:first-of-type {
 
 /* Ik gebruik een media query om te zorgen dat het grid in 1 of 3 kolommen staat, dit zorgt voor een goede overgang tussen schermgroottes */
 
-@media (min-width: 300px) {
+@media (min-width: 25em) {
     .bestelgrid {
         grid-template-columns: repeat(1, 1fr);
     }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 40em) {
     .bestelgrid {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -166,7 +225,7 @@ h3 {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
-    max-width: 500px;
+    max-width: 30em;
 }
 
 
@@ -277,27 +336,27 @@ h3 {
     padding: 6em 0em 1.5em 0.5em;
     color: white;
     font-size: 1.5em;
-    text-shadow: 2px 2px 2px rgba(2, 0, 0, 0.5);
+    text-shadow: 0.15em 0.15em 0.15em rgba(2, 0, 0, 0.5);
 }
 
 .acties h4 {
     padding: 6em 0em 1.5em 0.5em;
     color: white;
     font-size: 1.5em;
-    text-shadow: 2px 2px 2px rgba(2, 0, 0, 0.5);
+    text-shadow: 0.15em 0.15em 0.15em rgba(2, 0, 0, 0.5);
 }
 
 .aanbod button {
     background-color: #44c767;
-    border-radius: 8px;
-    border: 1px solid #18ab29;
+    border-radius: 0.3em;
+    border: 0.05em solid #18ab29;
     cursor: pointer;
     color: #ffffff;
     font-family: Arial;
     font-size: 1em;
-    padding: 7px 12px;
+    padding: 0.3em 0.5em;
     text-decoration: none;
-    text-shadow: 0px 1px 0px #2f6627;
+    text-shadow: 0 0.05em 0 #2f6627;
     margin-left: 1em;
 }
 
@@ -306,21 +365,21 @@ h3 {
 }
 
 .aanbod article {
-    max-width: 400px;
+    max-width: 25em;
 }
 
 .acties button {
     background-color: #44c767;
     left: 1em;
-    border-radius: 8px;
-    border: 1px solid #18ab29;
+    border-radius: 0.3em;
+    border: 0.05em solid #18ab29;
     cursor: pointer;
     color: #ffffff;
     font-family: Arial;
     font-size: 1em;
-    padding: 7px 12px;
+    padding: 0.3em 0.5em;
     text-decoration: none;
-    text-shadow: 0px 1px 0px #2f6627;
+    text-shadow: 0 0.05em 0 #2f6627;
     margin-left: 1em;
 }
 
@@ -329,7 +388,7 @@ h3 {
 }
 
 .acties article {
-    max-width: 500px;
+    max-width: 30em;
 }
 
 
@@ -386,16 +445,15 @@ footer input {
 
 footer button {
     background-color: #44c767;
-    left: 1em;
-    border-radius: 5px;
-    border: 1px solid #18ab29;
+    border-radius: 0.3em;
+    border: 0.05em solid #18ab29;
     cursor: pointer;
     color: #ffffff;
     font-family: Arial;
     font-size: 1em;
-    padding: 7px 12px;
+    padding: 0.4em 0.6em;
     text-decoration: none;
-    text-shadow: 0px 1px 0px #2f6627;
+    text-shadow: 0 0.05em 0 #2f6627;
     margin-top: 1em;
 }
 
@@ -424,25 +482,25 @@ footer button:hover {
     width: 100%;
     margin: auto;
     margin-top: 0.5em;
-    height: 200px;
+    height: 8em;
     background-size: cover;
     background-position: center;
 }
 
 .lunchdealbanner h1 {
-    text-shadow: 2px 2px 3px rgba(2, 0, 0, 0.5);
+    text-shadow: 0.07em 0.07em 0.1em rgba(2, 0, 0, 0.5);
 }
 
 
-/* Ik gebruik een aparte tag voor deze tekst, omdat ik anders alle bodytekst over de hele sit aanpas als ik simpelweg een <p> zou gebruiken  */
+/* Ik gebruik een aparte class voor deze tekst, omdat ik anders alle bodytekst over de hele site aanpas als ik simpelweg een <p> zou gebruiken  */
 
-#bodytekst {
+.bodytekst {
     font-weight: bold;
     font-size: 1.2em;
     text-align: center;
     padding: 2em 0;
     margin: auto;
-    max-width: 700px;
+    max-width: 35em;
 }
 
 
@@ -450,7 +508,7 @@ footer button:hover {
 
 .lunchdealuitleg {
     background-color: #ede9e8;
-    max-width: 800px;
+    max-width: 50em;
     margin: auto;
     padding: 0 3em 3em 3em;
 }
@@ -499,8 +557,8 @@ footer button:hover {
 
 .deals article {
     padding-top: 2em;
-    min-width: 300px;
-    max-width: 700px;
+    min-width: 19em;
+    max-width: 40em;
     height: 15em;
     margin: auto;
     margin-top: 4em;
@@ -531,15 +589,15 @@ footer button:hover {
 
 .deals button {
     background-color: #44c767;
-    border-radius: 4px;
-    border: 1px solid #18ab29;
+    border-radius: 0.2em;
+    border: 0.05em solid #18ab29;
     cursor: pointer;
     color: #ffffff;
     font-family: Arial;
     font-size: 1em;
-    padding: 15px 15px;
+    padding: 0.9em 0.9em;
     text-decoration: none;
-    text-shadow: 0px 1px 0px #2f6627;
+    text-shadow: 0 0.05em 0 #2f6627;
     margin-left: 7em;
 }
 
@@ -548,7 +606,7 @@ footer button:hover {
 }
 
 .deals article {
-    max-width: 400px;
+    max-width: 25em;
 }
 
 .deals h4 {
@@ -556,5 +614,5 @@ footer button:hover {
     color: white;
     font-size: 1.5em;
     padding: 5em 0 0.2em 0;
-    text-shadow: 2px 2px 3px rgba(2, 0, 0, 0.5);
+    text-shadow: 0.1em 0.1em 0.15em rgba(2, 0, 0, 0.5);
 }
