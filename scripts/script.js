@@ -5,10 +5,16 @@
 Bron die ik heb gebruikt voor dit menu: https://www.w3schools.com/howto/howto_js_sidenav.asp */
 
 
-function openNav() {
-    document.getElementById("mySidenav").style.width = "40%";
-}
+var openbtn = document.querySelector('.ham');
+var closebtn = document.querySelector('.closebtn');
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
+
+
+openbtn.addEventListener("click", () => {
+    document.getElementById("mySidenav").style.width = "40%";
+});
+
+
+closebtn.addEventListener("click", () => {
+    document.getElementById("mySidenav").style.width = 0;
+});
